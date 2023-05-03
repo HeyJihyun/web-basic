@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습7</title>
+    <style>
+        * {
+            background-color: #f5f5f5;
+        }
+
+        body {
+            width: 500px;
+            margin: 80px auto;
+        }
+
+        img {
+            display: block;
+            margin: 30px auto;
+        }
+
+        form {
+            width: 450px;
+            margin: 0 auto;
+        }
+
+        input,
+        select {
+            background-color: #fff;
+            width: 450px;
+            height: 50px;
+            border: 1px #bbb solid;
+            margin: 5px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="submit"] {
+            background-color: #03CF5D;
+            color: #fff;
+            font-size: 1.3em;
+            font-weight: bold;
+            border: 0px;
+        }
+
+        input[type="button"] {
+            width: 150px;
+            background-color: #03CF5D;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        input[disabled] {
+            background-color: #f5f5f5;
+        }
+
+        input[value=" @naver.com"] {
+            text-align: right;
+        }
+
+        input[placeholder="전화번호 입력"] {
+            width: 274px;
+        }
+
+        .birthday {
+            width: 130px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://logoproject.naver.com/img/img_story_renewal.png">
+    <form action="">
+        <b>아이디</b><br>
+        <input type="text" value=" @naver.com"><br>
+        <br>
+        <b>비밀번호</b><br>
+        <input type="password"><br>
+        <br>
+        <b>비밀번호 재확인</b><br>
+        <input type="password"><br>
+        <br>
+        <b>이름</b><br>
+        <input type="text"><br>
+        <br>
+        <b>생년월일</b><br>
+        <input type="number" placeholder="년(4자)" class="birthday">
+        <select class="birthday">
+            <option value="">월</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="11">12</option>
+        </select>
+        <input type="number" placeholder="일" class="birthday">
+        <br>
+        <br>
+        <b>성별</b><br>
+        <select>
+            <option value="gender" disabled selected>성별</option>
+            <option value="male">남자</option>
+            <option value="female">여자</option>
+            <option value="NotSelect">선택 안함</option>
+        </select><br>
+        <br>
+        <b>본인확인 이메일</b>(선택)<br>
+        <input type="email"><br>
+        <br>
+        <b>휴대전화</b><br>
+        <select name="" id="">
+            <option>노르웨이 +47</option>
+            <option>뉴질랜드 +64</option>
+            <option selected>대한민국 +82</option>
+            <option>미국/캐나다 +1</option>
+        </select>
+        <br>
+        <input type="tel" placeholder="전화번호 입력">
+        <input type="button" value="인증번호 받기"><br>
+        <input type="text" disabled placeholder="인증번호 입력하세요"><br>
+        <br>
+
+        <input type="submit" value="가입하기">
+    </form>
+</body>
+
+</html>
