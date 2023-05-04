@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poor Story', cursive;
+        }
+
+        .div_class {
+            width: 600px;
+            height: 110px;
+            line-height: 100px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #div1 {
+            background-color: darksalmon;
+        }
+
+        #div2 {
+            background-color: antiquewhite;
+        }
+
+        #div3 {
+            background-color: cornsilk;
+        }
+
+        #div4 {
+            background-color: cadetblue;
+        }
+
+        #div5 {
+            background-color: lightblue;
+        }
+
+        .span_class {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        #div1 .span_class {
+            border: 1px solid tomato;
+        }
+
+        #div2 .span_class {
+            border: 1px solid orange;
+        }
+
+        #div3 .span_class {
+            border: 1px solid tan;
+        }
+
+        #div4 .span_class {
+            border: 1px solid darkseagreen;
+        }
+
+        #div5 .span_class {
+            border: 1px solid darkcyan;
+        }
+
+        #span15,
+        #span24,
+        #span33,
+        #span42,
+        #span51 {
+            text-transform: uppercase;
+            color: white;
+        }
+
+        #div1 #span15 {
+            background-color: tomato;
+            text-decoration: overline;
+            border: 3px dashed tomato;
+            outline: 3px dashed tomato;
+        }
+
+        #div2 #span24 {
+            background-color: orange;
+            text-decoration: underline;
+            text-underline-position: under;
+            border: 1px solid antiquewhite;
+            outline: 4px solid orange;
+        }
+
+        #div3 #span33 {
+            background-color: tan;
+            text-decoration: overline;
+            border: 1px solid cornsilk;
+            outline: 4px dotted tan;
+        }
+
+        .span_class:hover {
+            background-color: dimgrey;
+            text-decoration: underline;
+            outline: 4px dotted dimgrey;
+            color: white;
+            cursor: pointer;
+        }
+
+        #div4 #span42 {
+            background-color: darkseagreen;
+            text-decoration: underline;
+            text-decoration-color: cadetblue;
+            text-underline-offset: 10px;
+            border: 3px double cadetblue;
+            outline: 4px solid darkseagreen;
+        }
+
+        #div5 #span51 {
+            background-color: darkcyan;
+            text-decoration: overline underline;
+            text-decoration-style: wavy;
+            text-underline-offset: 15px;
+            border: 3px dashed lightblue;
+            outline: 4px solid darkcyan;
+            text-shadow: 5px 5px black;
+
+        }
+
+        p {
+            border: 1px dotted black;
+            margin: 30px auto;
+            padding: 10px;
+            width: 600px;
+            text-indent: 1em;
+            font-size: 0.7em;
+            line-height: 20px;
+            /* font-family: 'Times New Roman', Times, serif; */
+        }
+
+        p span {
+            font-style: italic;
+            font-size: large;
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div_class" id="div1">
+        <span class="span_class" name="span_name1" id="span11">나는</span>
+        <span class="span_class" name="span_name1" id="span12">첫번째줄</span>
+        <span class="span_class" name="span_name1" id="span13">빨간색</span>
+        <span class="span_class" name="span_name1" id="span14">상자야</span>
+        <span class="span_class" name="span_name1" id="span15">◖⚆ᴥ⚆◗ </span>
+    </div>
+
+    <div class="div_class" id="div2">
+        <span class="span_class" name="span_name2" id="span21">나는</span>
+        <span class="span_class" name="span_name2" id="span22">두번째줄</span>
+        <span class="span_class" name="span_name2" id="span23">주황색</span>
+        <span class="span_class" name="span_name2" id="span24">૮ – ﻌ –"ა</span>
+        <span class="span_class" name="span_name2" id="span25">야!!!</span>
+    </div>
+
+    <div class="div_class" id="div3">
+        <span class="span_class" name="span_name3" id="span31">나는</span>
+        <span class="span_class" name="span_name3" id="span32">세번째줄</span>
+        <span class="span_class" name="span_name3" id="span33">૮₍ ᓀ ‸ ᓂ ₎ა</span>
+        <span class="span_class" name="span_name3" id="span34">상자</span>
+        <span class="span_class" name="span_name3" id="span35">였을뻔!</span>
+    </div>
+
+    <div class="div_class" id="div4">
+        <span class="span_class" name="span_name4" id="span41">나는</span>
+        <span class="span_class" name="span_name4" id="span42">₍ᐢ. ̯.ᐢ₎</span>
+        <span class="span_class" name="span_name4" id="span43">초록색</span>
+        <span class="span_class" name="span_name4" id="span44">상자</span>
+        <span class="span_class" name="span_name4" id="span45">지롱~~</span>
+    </div>
+
+    <div class="div_class" id="div5">
+        <span class="span_class" name="span_name5" id="span51">🐇..:¨·.·¨:</span>
+        <span class="span_class" name="span_name5" id="span52">다섯번째줄</span>
+        <span class="span_class" name="span_name5" id="span53">파란색인척</span>
+        <span class="span_class" name="span_name5" id="span54">하는</span>
+        <span class="span_class" name="span_name5" id="span55">청록상자!</span>
+    </div>
+
+    <p>
+        <span>## 오전-HTML 복습 및 미디어</span>
+
+        - label - input radio 내에서 사용
+        - label for=”” 와 id =”” 동일한 내용을 넣어야 함
+        - radio에서 label 내에 글씨를 선택해도 사용가능하게 하는것
+        - h 태그
+        - 제목태그
+        - h1~6까지 있음
+        - div 태그
+        - 특별한 역할을 하지 않는 영역
+        - display 속성이 block(한라인을 모두 차지하는 방식)
+        - span 태그
+        - 특별한 역할을 하지 않는 영역
+        - display 속성이 inline (실제 자기 자신의 영역을 차지)
+        - 미디어태그
+        - video
+        - controls - 플레이 컨트롤러 삽입
+        -
+        <source src=”” type=””> - mp4 또는 ogg 파일 삽입
+        - 위에 있는 순서데로 플레이 시도
+        - 브라우저 호환에 따라 사용이 되지 않는다면 아래로 순서대로 플레이
+        - audio
+        - video 태그와 동일하게 사용
+        - iframe
+        - youtube → 공유 → 퍼가기
+        - 다른 사이트를 가져올 수 있음
+        - github video mp4 sample 라고 검색하면 여러 샘플들 확인 가능
+
+        - auto rename teg
+        - 태그 수정 시 닫는 태그도 자동 수정해주는 확장 프로그램
+
+        ## 오후 - CS
+
+        - css
+        - 좀 더 디자인에 최적화된 웹페이지 마크업 언어
+        - 엘리먼트
+        - 웹 디자인의 최소 단위
+        - 하나의 객체
+        - 반드시 태그만 의미하지는 않지만 이해하기 쉽게 하나의 태그를 지칭
+        - 셀렉터
+        - 선택자
+        - css 혹은 javascript로 변화시킬 대상을 지정할때 부름
+        - 하나 또는 다수의 엘리먼트
+        - tag, class, name, id를 이용
+        - 클래스(class)
+        - 다른 개발언어에서의 클래스와 전혀 다름
+        - 그룹
+        - 아이디
+        - 단 하나의 엘리먼트
+        - 중복 불가
+        - 네임
+        - 클래스 보다는 소수
+        - 기본 구조
+        - inline 방식
+        - 암묵적으로 head 안에 사용
+        - external 방식
+        - 외부파일에서 작성하고 연결
+        - **
+        <link rel="stylesheet" href="shared_vars.css">**
+        - 엘리먼트 선언
+        - class
+        - class=”클래스명”
+        - css - .클래스명
+        - id
+        - id=”아이디명”
+        - css - #아이디명
+        - name
+        - name = “네임명”
+        - css - [name = “네임명”] 사용안함
+        - <내가쓰고싶은 태그> </내가쓰고싶은 태그> 로 만들어 사용 가능
+        - 텍스트 제어
+        - text-align : 정렬
+
+
+        - 에밋 tip
+        - .클래스명 → 엔더
+        - 클래스명을 가진 div 자동 생성
+        - .클래스명1.클래스명2 로 두개의 클래스 명을 가진 div 생성가능
+        - #아이디명 → 엔터
+        - 아이디명을 가진 div 자동 생성
+        - 태그 * n
+        - 태그를 n개 생성
+        - table>tr*3>td*4
+        - tr3, td4개의 테이블 생성
+        - .div_class*3>span.span_class*3
+        - div3개 쨘! span도 쨘!
+        - span#span1.span_class*3
+        - id명이랑 클래스명두 쨘쨘!!
+    </p>
+
+
+    <!-- .div_class*3>sapn.span_class*3 -->
+    <!-- span#span1.span_class*3 -->
+</body>
+
+</html>
