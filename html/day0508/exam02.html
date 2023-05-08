@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습2</title>
+    <style>
+        .container {
+            position: relative;
+            width: 100%;
+            height: 800px;
+            border: 1px solid coral;
+            margin: 0 auto;
+        }
+
+        #img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            height: 40%;
+            z-index: 9999;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 40%;
+            background-image: url("https://pbs.twimg.com/media/Fc_iZg4akAIV7Ab?format=jpg&name=4096x4096");
+        }
+
+        #div1 {
+            position: absolute;
+            background-color: cadetblue;
+            height: 30%;
+            width: 100%;
+        }
+
+        #div2 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 70%;
+            width: 30%;
+            background-color: tomato;
+        }
+
+        #div3 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 30%;
+            width: 70%;
+            background-color: deeppink;
+        }
+
+        #div4 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 70%;
+            width: 30%;
+            background-color: yellow;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="img">
+        </div>
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+    </div>
+</body>
+
+</html>
