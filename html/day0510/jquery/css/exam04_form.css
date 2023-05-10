@@ -1,0 +1,65 @@
+body {
+    background-color: darkcyan;
+}
+
+form {
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid darkcyan;
+    background-color: #fff;
+    color: darkcyan;
+}
+
+ul {
+
+    padding: 0;
+}
+
+span {
+    margin-right: 10px;
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+li {
+    list-style: none;
+    text-align: left;
+    line-height: 40px;
+}
+
+li:last-child span {
+    float: left;
+    line-height: 80px;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 230px;
+    height: 25px;
+    margin: 0;
+    border: 1px solid darkcyan;
+}
+
+.checkList {
+    display: inline-block;
+}
+
+.button input {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: darkcyan;
+    color: white;
+    border: 2px solid darkcyan;
+    font-weight: bold;
+}
+
+.button input:hover {
+    background-color: white;
+    color: darkcyan;
+}
