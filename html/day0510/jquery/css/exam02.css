@@ -30,7 +30,8 @@ section div b {
     margin-right: 5px;
 }
 
-button {
+button,
+#submit {
     margin-top: 10px;
     width: 300px;
     height: 40px;
@@ -39,4 +40,17 @@ button {
     color: white;
     font-weight: bold;
     font-size: 1em;
+}
+#name {
+    width: 20%;
+    height: 40px;
+}
+
+#content {
+    height: 40px;
+    width: 40%;
+}
+
+#submit {
+    width: 30%;
 }
