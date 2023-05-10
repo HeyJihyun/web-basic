@@ -1,0 +1,42 @@
+.container {
+    padding: 25%;
+    width: 300px;
+}
+
+header {
+    height: 30px;
+    line-height: 30px;
+    padding: 10px;
+    background-color: #3b5998;
+    color: white;
+    font-weight: bold;
+}
+
+section {
+    background-color: #eaeaea;
+    padding: 30px 20px;
+}
+
+section div {
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+section div b {
+    display: inline-flex;
+    overflow: hidden;
+    width: 50px;
+    margin-right: 5px;
+}
+
+button {
+    margin-top: 10px;
+    width: 300px;
+    height: 40px;
+    background-color: #aaa;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+}

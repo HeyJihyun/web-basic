@@ -1,0 +1,32 @@
+.container {
+    padding: 25%;
+    text-align: center;
+}
+
+.buttonBox {
+    display: none;
+
+}
+
+.text {
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    line-height: 38px;
+    background-color: burlywood;
+    border: 2px solid burlywood;
+    border-radius: 20px;
+    color: white;
+    font-size: large;
+}
+
+button:hover {
+    background-color: white;
+    color: burlywood;
+    font-weight: bold;
+}
