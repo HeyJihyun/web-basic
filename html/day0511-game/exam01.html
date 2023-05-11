@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game만들기</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            // 키보드 이벤트 정리
+            const pompom = $("#pompom");
+            let count = 3;
+            start();
+            $("*").keydown(function (e) {
+                console.log(e.key);
+                switch (e.key) {
+                    case 'ArrowRight':
+                        moveRight();
+                        break;
+                    case 'ArrowLeft':
+                        moveleft();
+                        break;
+                    case 'ArrowUp':
+                        moveUp();
+                        break;
+                    case 'ArrowDown':
+                        moveDown();
+                        break;
+                }
+            });
+
+            function start() {
+                countDown();
+                setTimeout(function () {
+                    pompom.show();
+                }, 3000)
+            }
+
+            function countDown() {
+                let timer = setInterval(function () {
+                    console.log(count);
+                    count--;
+                    if (count < 0) {
+                        clearInterval(timer);
+                    }
+                }, 1000);
+            }
+
+            function moveRight() {
+                // 오른족 벽에 닿았는지
+                const pompomRightMargin = $('#pompom').css('right').replace('px', '');
+                if (pompomRightMargin > 0) {
+                    pompom.animate({ left: '+=5px' }, 0)
+                }
+            }
+
+            function moveleft() {
+                const pompomLeftMargin = $('#pompom').css('left').replace('px', '');
+                if (pompomLeftMargin > 0) {
+                    pompom.animate({ left: '-=5px' }, 0)
+                }
+            }
+
+            function moveUp() {
+                const pompomTopMargin = $('#pompom').css('top').replace('px', '');
+                if (pompomTopMargin > 0) {
+                    pompom.animate({ top: '-=5px' }, 0)
+                }
+            }
+
+            function moveDown() {
+                const pompombottomMargin = $('#pompom').css('bottom').replace('px', '');
+                if (pompombottomMargin > 0) {
+                    pompom.animate({ top: '+=5px' }, 0)
+                }
+            }
+        });
+    </script>
+    <style>
+        #container {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+
+        #pompom {
+            position: absolute;
+            width: 50px;
+            left: 100px;
+            top: 100px;
+            border: 1px solid black;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <img id="pompom" src="./pompompurin2.png" alt="">
+    </div>
+</body>
+
+</html>

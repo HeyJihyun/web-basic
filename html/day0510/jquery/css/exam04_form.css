@@ -47,6 +47,8 @@ select {
 
 .checkList {
     display: inline-block;
+    line-height: 20px;
+    padding-top: 20px;
 }
 
 .button input {

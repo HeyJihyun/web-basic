@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="./js/script.js">
+
+
+    </script>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 250px;
+            background-image: url("./background.png");
+            background-size: contain;
+            overflow: hidden;
+        }
+
+        #player {
+            width: 80px;
+            height: 50px;
+            position: absolute;
+            bottom: 50px;
+            left: 20px;
+            background-image: url("./player.gif");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        #monster {
+            width: 30px;
+            height: 30px;
+            background-image: url("./monster.gif");
+            background-size: cover;
+            position: absolute;
+            right: -30px;
+            bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="player"></div>
+        <div id="monster"></div>
+    </div>
+</body>
+
+</html>
