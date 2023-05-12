@@ -12,20 +12,67 @@
 
     </script>
     <style>
+        @font-face {
+            font-family: 'DungGeunMo';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
-            background-color: antiquewhite;
+            background-color: rgba(54, 16, 1, 0.95);
         }
 
-        .container {
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 855px;
+            height: 360px;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+       
+
+        .gameOverConatainer, .container{
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 500px;
             height: 250px;
-            background-image: url("./background.png");
-            background-size: contain;
             overflow: hidden;
+            font-family: 'DungGeunMo';
+            
+        }
+        
+        .gameOverConatainer{
+            display: none;
+            background-color: rgba(54, 16, 1, 0.95);
+            color: white;
+            font-size: 3.5em;
+            text-align: center;
+            text-shadow: -2px 0 gold, 0 2px gold, 2px 0 gold, 0 -2px gold;
+            padding: 20px;
+            border: 5px solid brown;
+        }
+        .gameOverConatainer img{
+            display: block;
+            width: 130px;
+            margin: 0 auto;
+        }
+
+        .gameOverConatainer button {
+            width: 150px;
+            height: 40px;
+            font-family: 'DungGeunMo';
+            font-size: 0.5em;
+            background-color: gold;
+            color: brown;
+            border: 2px inset gold;
+        }
+        .container {
+            background-image: url("./background1.png");
         }
 
         #player {
@@ -37,9 +84,11 @@
             background-image: url("./player.gif");
             background-size: contain;
             background-repeat: no-repeat;
+            border: 1px solid salmon;
         }
 
         #monster {
+            border: 1px solid salmon;
             width: 30px;
             height: 30px;
             background-image: url("./monster.gif");
@@ -52,9 +101,18 @@
 </head>
 
 <body>
+    
     <div class="container">
         <div id="player"></div>
         <div id="monster"></div>
+    </div>
+    <div class="gameOverConatainer">
+        Game Over
+        <img src="./gameOver.gif" alt="">
+        <button>Replay</button>
+    </div>
+    <div class="box">
+        <img src="./container.png" alt="">
     </div>
 </body>
 
