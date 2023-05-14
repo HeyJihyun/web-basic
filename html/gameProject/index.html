@@ -24,13 +24,16 @@
             background-color: #f26d83;
         }
 
-        body > img {
+        .box {
             position: absolute;
             top: 50%;
             left: 49.9%;
             transform: translate(-50%, -50%);
             width: 780px;
+            height: 930px;
             z-index: -1;
+            background-image: url("./asset/container.png");
+            background-size: cover;
         }
 
 
@@ -95,8 +98,8 @@
 
         #monster {
             border: 1px solid salmon;
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             background-image: url("./asset/monster_1.gif");
             background-size: cover;
             position: absolute;
@@ -107,17 +110,18 @@
 </head>
 
 <body>
-
-    <div class="container">
-        <div id="player"></div>
-        <div id="monster"></div>
+    <div class="box">
+        <!-- <img src="./asset/container.png" alt=""> -->
+        <div class="container">
+            <div id="player"></div>
+            <div id="monster"></div>
+        </div>
+        <div class="gameOverContainer">
+            Game Over
+            <img src="./gameOver.gif" alt="">
+            <button id="replay">Replay</button>
+        </div>
     </div>
-    <div class="gameOverContainer">
-        Game Over
-        <img src="./gameOver.gif" alt="">
-        <button id="replay">Replay</button>
-    </div>
-    <img src="./asset/container.png" alt="">
 </body>
 
 </html>
