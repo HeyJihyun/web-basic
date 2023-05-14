@@ -14,8 +14,14 @@ $(function () {
   gameStart();
 
   function gameStart() {
+    score = 0; // 점수 초기화
+    position = 0; // 배경 위치 초기화
+    // player 초기화
+    player.css("bottom", "20px");
+
     setKeyboardEvent();
     enemyStart();
+    replayKey();
     playing = setInterval(function () {
       if (!checkGameOver()) {
         moveBackground();
@@ -53,7 +59,7 @@ $(function () {
     isJumping = true;
     player
       .animate({ bottom: "130px" }, 500)
-      .animate({ bottom: "50px" }, 500, function () {
+      .animate({ bottom: "20px" }, 500, function () {
         isJumping = false;
       });
   }
@@ -67,13 +73,12 @@ $(function () {
   function enemyStart() {
     const speed = getRandomNumber(1500, 4000);
     monster
-      .animate({ right: "500px" }, speed, "linear",function () {
+      .css("right", "-50px")
+      .animate({ right: "500px" }, speed, "linear", function () {
         // 점수 올리자
         score += 100;
         // updateScore(score);
 
-        // 적 리셋
-        monster.css('right', '-50px');
         enemyStart();
       });
   }
@@ -86,9 +91,9 @@ $(function () {
     const monsterRect = monster[0].getBoundingClientRect();
     checked =
       playerRect.left + 35 < monsterRect.right + 5 &&
-      playerRect.right > monsterRect.left  + 5  &&
+      playerRect.right > monsterRect.left + 5 &&
       playerRect.top < monsterRect.bottom + 5 &&
-      playerRect.bottom > monsterRect.top  + 5;
+      playerRect.bottom > monsterRect.top + 5;
 
     console.log(checked);
 
@@ -97,8 +102,16 @@ $(function () {
 
   function gameOver(playing) {
     clearInterval(playing);
-    $(".gameOverConatainer").slideDown();
-    player.stop();
+    $(".gameOverContainer").slideDown();
     monster.stop();
+    // 이전 이벤트 핸들러 제거
+    $("html").off("keydown");
+  }
+
+  function replayKey() {
+    $("#replay").one("click", function () {
+      $(".gameOverContainer").slideUp();
+      gameStart();
+    });
   }
 });

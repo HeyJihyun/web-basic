@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script src="./js/script.js">
 
 
@@ -18,35 +19,36 @@
             font-weight: normal;
             font-style: normal;
         }
+
         body {
-            background-color: rgba(54, 16, 1, 0.95);
+            background-color: #f26d83;
         }
 
-        .box{
+        body > img {
             position: absolute;
             top: 50%;
-            left: 50%;
-            width: 855px;
-            height: 360px;
+            left: 49.9%;
             transform: translate(-50%, -50%);
-            z-index: 9999;
+            width: 780px;
+            z-index: -1;
         }
 
-       
 
-        .gameOverConatainer, .container{
+
+        .gameOverContainer,
+        .container {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 32.2%;
+            left: 49.9%;
             transform: translate(-50%, -50%);
             width: 500px;
-            height: 250px;
+            height: 240px;
             overflow: hidden;
             font-family: 'DungGeunMo';
-            
+
         }
-        
-        .gameOverConatainer{
+
+        .gameOverContainer {
             display: none;
             background-color: rgba(54, 16, 1, 0.95);
             color: white;
@@ -54,15 +56,16 @@
             text-align: center;
             text-shadow: -2px 0 gold, 0 2px gold, 2px 0 gold, 0 -2px gold;
             padding: 20px;
-            border: 5px solid brown;
+            box-sizing: border-box;
         }
-        .gameOverConatainer img{
+
+        .gameOverContainer img {
             display: block;
             width: 130px;
             margin: 0 auto;
         }
 
-        .gameOverConatainer button {
+        .gameOverContainer button {
             width: 150px;
             height: 40px;
             font-family: 'DungGeunMo';
@@ -70,16 +73,19 @@
             background-color: gold;
             color: brown;
             border: 2px inset gold;
+            cursor: pointer;
+            z-index: 999999;
         }
+
         .container {
-            background-image: url("./background1.png");
+            background-image: url("./background2.png");
         }
 
         #player {
             width: 80px;
-            height: 50px;
+            height: 60px;
             position: absolute;
-            bottom: 50px;
+            bottom: 20px;
             left: 20px;
             background-image: url("./player.gif");
             background-size: contain;
@@ -89,31 +95,29 @@
 
         #monster {
             border: 1px solid salmon;
-            width: 30px;
-            height: 30px;
-            background-image: url("./monster.gif");
+            width: 40px;
+            height: 40px;
+            background-image: url("./asset/monster_1.gif");
             background-size: cover;
             position: absolute;
             right: -30px;
-            bottom: 50px;
+            bottom: 20px;
         }
     </style>
 </head>
 
 <body>
-    
+
     <div class="container">
         <div id="player"></div>
         <div id="monster"></div>
     </div>
-    <div class="gameOverConatainer">
+    <div class="gameOverContainer">
         Game Over
         <img src="./gameOver.gif" alt="">
-        <button>Replay</button>
+        <button id="replay">Replay</button>
     </div>
-    <div class="box">
-        <img src="./container.png" alt="">
-    </div>
+    <img src="./asset/container.png" alt="">
 </body>
 
 </html>
