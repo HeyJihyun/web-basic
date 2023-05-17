@@ -54,8 +54,8 @@
                     .then((data) => {
                         if (data.results.length > 0) {
                             const trailerKey = data.results[data.results.length - 1].key;
-                            const trailerUrl = `https://www.youtube.com/embed/${trailerKey}?autoplay=1&loop=1&mute=1`;
-                            const trailerIframe = `<iframe width="100%" height="400px" src="${trailerUrl}" frameborder="0" ></iframe>`;
+                            const trailerUrl = `https://www.youtube.com/embed/${trailerKey}?loop=1&autoplay=1&mute=1`;
+                            const trailerIframe = `<iframe width="100%" height="100%" src="${trailerUrl}" frameborder="0" ></iframe>`;
                             $('.content').html(trailerIframe);
                         } else {
                             $('.content').html(`<img src =  https://image.tmdb.org/t/p/w500${image}>`);
@@ -68,6 +68,12 @@
             }
         </script>
     <style>
+        @font-face {
+            font-family: 'TTWanjudaedunsancheB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -108,6 +114,10 @@
             box-shadow: 3px 3px 6px #ccc;
         }
 
+        .detailBox p{
+            margin: 7px;
+        }
+
         .movie-details {
             padding: 30px;
             padding-left: 400px;
@@ -137,18 +147,25 @@
             overflow: hidden;
             background-color: black;
             background-size: cover;
+            text-align: center;
         }
-
+        
         .content img{
             width: 100%;
-            filter: blur(1);
+            opacity: 0.5;
+        }
+
+        a{
+            text-decoration: none;
         }
     </style>
 </head>
 
 <body onload="loadMovie()">
     <header>
-        <h1>JH Movies</h1>
+        <a href="./exam05.html">
+            <h1>JH Movies</h1>
+        </a>
     </header>
     <div class="container">
     </div>

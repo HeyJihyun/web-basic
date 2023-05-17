@@ -31,7 +31,8 @@ h1{
 
 .container {
     width: 85%;
-    margin: 70px auto;
+    margin-top: 70px;
+    margin-left: 250px;
 }
 
 .card {
@@ -41,13 +42,13 @@ h1{
     width: 200px;
     height: 400px;
     border: 1px solid #ccc;
+    box-shadow: 3px 3px 6px lightgray;
     margin-bottom: 10px;
     cursor: pointer;
     align-items: flex-start;
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 3px 3px 6px lightgray;
 }
 
 
@@ -109,4 +110,16 @@ p {
     left: 0;
     overflow: hidden;
     color: white;
+}
+
+section{
+    position: fixed;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 6px lightgray;
+    width: 200px;
+    height: 400px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 15px;
+
 }
